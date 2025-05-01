@@ -1,0 +1,19 @@
+import random
+team=int(input("Enter no of teams"))
+print("Enter all the matches")
+teams=[]
+for i in range(team):
+    teams.append(input())
+matches=[]
+m=int(input("Enter matches between the teams"))
+
+
+for i in range(team-1):
+    for j in range(i+1,team):
+        for k in range(m):
+            matches.append((teams[i],teams[j]))
+random.shuffle(matches)
+no=1
+for i in matches:
+    print("matches {}:{} v/s {}".format(no,i[0],i[1]))
+    no=no+1
